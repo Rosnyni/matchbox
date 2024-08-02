@@ -48,19 +48,122 @@ hapi:
       # These are allowed_origin patterns, see: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/cors/CorsConfiguration.html#setAllowedOriginPatterns-java.util.List-
       allowed_origin:
         - "*"
-#    implementationguides:
-      # fhir_r4_core:
-      #   name: hl7.fhir.r4.core
-      #   version: 4.0.1
-      #   url: classpath:/hl7.fhir.r4.core.tgz
-      # fhir_extensions:
-      #   name: hl7.fhir.uv.extensions.r4
-      #   version: 1.0.0
-      #   url: classpath:/hl7.fhir.uv.extensions.r4#1.0.0.tgz
-      # fhir_terminology:
-      #   name: hl7.terminology
-      #   version: 5.4.0
-      #   url: classpath:/hl7.terminology#5.4.0.tgz
+    implementationguides:
+      fhir_r4_core:
+        name: hl7.fhir.r4.core
+        version: 4.0.1
+        url: classpath:/hl7.fhir.r4.core.tgz
+      # fhir_extensions_r4_1_0_0:
+        # name: hl7.fhir.uv.extensions.r4
+        # version: 1.0.0
+        # url: classpath:/hl7.fhir.uv.extensions.r4#1.0.0.tgz
+      fhir_extensions_r4_5_1_0:
+        name: hl7.fhir.uv.extensions.r4
+        version: 5.1.0
+        url: classpath:/hl7.fhir.uv.extensions.r4#5.1.0.tgz
+      fhir_extensions_r5_5_1_0:
+        name: hl7.fhir.uv.extensions.r5
+        version: 5.1.0
+        url: classpath:/hl7.fhir.uv.extensions.r5#5.1.0.tgz
+      fhir_terminology_r4_5_0_0:
+        name: hl7.terminology.r4
+        version: 5.0.0
+        url: classpath:/hl7.terminology.r4#5.0.0.tgz
+      fhir_terminology_5_3_0:
+        name: hl7.terminology
+        version: 5.3.0
+        url: classpath:/hl7.terminology#5.3.0.tgz
+      fhir_terminology_r4_5_3_0:
+        name: hl7.terminology.r4
+        version: 5.3.0
+        url: classpath:/hl7.terminology.r4#5.3.0.tgz
+      # fhir_terminology_5_4_0:
+        # name: hl7.terminology
+        # version: 5.4.0
+        # url: classpath:/hl7.terminology#5.4.0.tgz
+      fhir_terminology_r4_5_5_0:
+        name: hl7.terminology.r4
+        version: 5.5.0
+        url: classpath:/hl7.terminology.r4#5.5.0.tgz
+      fhir_terminology_r5_6_0_0:
+        name: hl7.terminology.r5
+        version: 6.0.0
+        url: classpath:/hl7.terminology.r5#6.0.0.tgz
+      fhir_terminology_r4_6_0_2:
+        name: hl7.terminology.r4
+        version: 6.0.2
+        url: classpath:/hl7.terminology.r4#6.0.2.tgz
+      fhir_terminology_r5_6_0_2:
+        name: hl7.terminology.r5
+        version: 6.0.2
+        url: classpath:/hl7.terminology.r5#6.0.2.tgz
+      fhir_sdc_3_0_0:
+        name: hl7.fhir.uv.sdc
+        version: 3.0.0
+        url: classpath:/hl7.fhir.uv.sdc#3.0.0.tgz
+      fhir_r4_example:
+        name: hl7.fhir.r4.examples
+        version: 4.0.1
+        url: classpath:/hl7.fhir.r4.examples#4.0.1.tgz
+      fhir_crmi_1_0_0:
+        name: hl7.fhir.uv.crmi
+        version: 1.0.0
+        url: classpath:/hl7.fhir.uv.crmi#1.0.0.tgz
+      fhir_crmi_1_0_0_ballot:
+        name: hl7.fhir.uv.crmi
+        version: 1.0.0-ballot
+        url: classpath:/hl7.fhir.uv.crmi#1.0.0-ballot.tgz
+      fhir_cqf_common_4_0_1:
+        name: fhir.cqf.common
+        version: 4.0.1
+        url: classpath:/fhir.cqf.common#4.0.1.tgz
+      fhir_uv_cpg_1_0_0:
+        name: hl7.fhir.uv.cpg
+        version: 1.0.0
+        url: classepath:/hl7.fhir.uv.cpg#1.0.0.tgz
+      fhir_fr_core_2_0_1:
+        name: hl7.fhir.fr.core
+        version: 2.0.1
+        url: classpath:/hl7.fhir.fr.core#2.0.1.tgz
+      fhir_fr_nos_1_2_0:
+        name: ans.fr.nos
+        version: 1.2.0
+        url: classpath:/ans.fr.nos#1.2.0.tgz
+      fhir_fr_eds_0_1_0:
+        name: ans.fhir.fr.eds
+        version: 0.1.0
+        url: classpath:/ans.fhir.fr.eds#0.1.0.tgz
+      fhir_aphp_core:
+        name: aphp.fhir.fr.core
+        version: 0.1.0
+        url: classpath:/aphp.fhir.fr.core.tgz
+      fhir_aphp_requirements:
+        name: aphp.fhir.fr.requirements
+        version: 0.1.0
+        url: classpath:/aphp.fhir.fr.requirements.tgz
+      fhir_aphp_eds:
+        name: aphp.fhir.fr.eds
+        version: 0.1.2
+        url: classpath:/aphp.fhir.fr.eds#0.1.2.tgz
+      # fhir_aphp_terminology:
+        # name: aphp.fhir.fr.terminology
+        # version: 0.1.0
+        # url: classpath:/aphp.fhir.fr.terminology.tgz
+      # fhir_aphp_eds_arem:
+        # name: aphp.fhir.fr.eds
+        # version: 0.1.0
+        # url: classpath:/aphp.fhir.fr.eds-arem.tgz
+      # fhir_aphp_eds_croissped:
+        # name: aphp.fhir.fr.eds
+        # version: 0.1.1-ngr-croissped
+        # url: classpath:/aphp.fhir.fr.eds#0.1.1-ngr-croissped.tgz
+      fhir_aphp_terminology_ghm:
+        name: aphp.fhir.fr.terminology
+        version: 0.1.0
+        url: classpath:/aphp.fhir.fr.terminology-ghm.tgz
+
+
+
     #      ch-core:
     #        name: ch.fhir.ig.ch-core
     #        version: 4.0.0-ballot
@@ -75,7 +178,9 @@ matchbox:
     context:
       fhirVersion: 4.0.1
       txServer: n/a
-#      xVersion: true      
+#      xVersion: true
+      onlyOneEngine: true
+#      xVersion: true
 #      onlyOneEngine: true
 #      igsPreloaded: ch.fhir.ig.ch-core#4.0.0-ballot
       suppressWarnInfo:
