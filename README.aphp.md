@@ -1,0 +1,34 @@
+Dans IntelliJ : 
+ - configurer les package fhir : (il y a sans doute moyen d'en mettre moins...)
+   - ajouter les archives .targz dans le dossier matchbox-engine/src/main/resources pour toutes les dépendances. Il faut donc installer, selon le sujet sur lequel vous travaillez les ig crmi, sdc, terminology, nos... dans les versions précisées dans chaque IG. 
+   - Pour les IG qui sont buildés localement, les manifestes des packages pointent vers la version "dev", qui n'est pas celle des packages, il faut donc modifier le manifeste pour mettre la version réel du package. à ce titre il faut : 
+     - décompresser le package
+	 - modifier les versions des 'dependencies' dans le fichier package.json
+	 - recompresser le package (7zip permet de le faire : première compression tar, seconde compression gzip)
+   - paramétrer les ig dans le fichier matchbox-server/src/main/resources/application.yaml : hapi:fhir:implementationguides:
+ - set matchbox.fhir.context.onlyOneEngine=true in application.yaml
+ - instal JAVA : File > Project Structure >> Project setting > Project > SDK > temurin-21)
+ - configurer run maven : 
+   - Run > Edit configurations >> Maven > Add new run configuration >> 
+     - Name : matchbox [package] ; 
+     - run : package -f pom.xml ; 
+	 - Java option > JRE > project SDK temurin-21
+	 - Java option > Modify > skip tests
+ - run matchbox [package]
+ - installer docker desktop et le lancer
+ - installer le plugin docker
+ - configurer runs docker : Run > Edit configurations >>
+   - + > Docker > Dockerfile 
+     - Name : Dockerfile Matchbox
+	 - Server : Docker
+	 - Dockerfile : matchbox-server\Dockerfile
+	 - image tag : matchbox
+	 - Activate tool window : true
+   - + > Docker > Docker Compose
+     - Name : with-postgres: Compose Docker
+	 - Server : Docker
+	 - Compose files : ./matchbox-server/with-postgres/docker-compose.yml; 
+	 - Remove orphans on 'down' : true
+	 - Activate tool window : true
+ - run Dockerfile Matchbox
+ - run with-postgres: Compose Docker
