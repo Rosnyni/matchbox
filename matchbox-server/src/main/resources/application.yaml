@@ -141,10 +141,14 @@ hapi:
         name: aphp.fhir.fr.requirements
         version: 0.1.0
         url: classpath:/aphp.fhir.fr.requirements.tgz
+      #fhir_aphp_eds:
+       # name: aphp.fhir.fr.eds
+       # version: 0.1.0
+       # url: classpath:/aphp.fhir.fr.eds.tgz
       fhir_aphp_eds:
         name: aphp.fhir.fr.eds
-        version: 0.1.2
-        url: classpath:/aphp.fhir.fr.eds#0.1.2.tgz
+        version: 0.1.3
+        url: classpath:/aphp.fhir.fr.eds#0.1.3.tgz
       # fhir_aphp_terminology:
         # name: aphp.fhir.fr.terminology
         # version: 0.1.0
@@ -180,8 +184,6 @@ matchbox:
       txServer: n/a
 #      xVersion: true
       onlyOneEngine: true
-#      xVersion: true
-#      onlyOneEngine: true
 #      igsPreloaded: ch.fhir.ig.ch-core#4.0.0-ballot
       suppressWarnInfo:
         hl7.fhir.r4.core#4.0.1:
