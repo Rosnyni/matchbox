@@ -1,7 +1,7 @@
 services:
   matchbox:
     # build: .
-    image: matchbox:latest
+    image: matchbox
     container_name: matchbox
     restart: on-failure
     ports:
@@ -11,7 +11,7 @@ services:
     volumes:
       - ./with-postgres:/config      
   matchbox-db:
-    image: postgres:latest
+    image: postgres:16-alpine
     container_name: matchbox-db
     restart: always
     # Comment out to not log queries

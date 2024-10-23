@@ -18,17 +18,17 @@ Dans IntelliJ :
  - installer docker desktop et le lancer
  - installer le plugin docker
  - configurer runs docker : Run > Edit configurations >>
-   - + > Docker > Dockerfile 
+   - \+ > Docker > Dockerfile 
      - Name : Dockerfile Matchbox
-	 - Server : Docker
-	 - Dockerfile : matchbox-server\Dockerfile
-	 - image tag : matchbox
-	 - Activate tool window : true
-   - + > Docker > Docker Compose
+     - Server : Docker
+     - Dockerfile : matchbox-server\Dockerfile
+     - image tag : matchbox
+     - Activate tool window : true
+   - \+ > Docker > Docker Compose
      - Name : with-postgres: Compose Docker
-	 - Server : Docker
-	 - Compose files : ./matchbox-server/with-postgres/docker-compose.yml; 
-	 - Remove orphans on 'down' : true
-	 - Activate tool window : true
+	   - Server : Docker
+	   - Compose files : ./matchbox-server/with-postgres/docker-compose.yml; 
+	   - Remove orphans on 'down' : true
+	   - Activate tool window : true
  - run Dockerfile Matchbox
  - run with-postgres: Compose Docker
