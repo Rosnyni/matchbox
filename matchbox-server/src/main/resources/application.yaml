@@ -141,10 +141,14 @@ hapi:
         name: aphp.fhir.fr.requirements
         version: 0.1.0
         url: classpath:/aphp.fhir.fr.requirements.tgz
-      fhir_aphp_eds:
+      fhir_aphp_eds_0_1_5_chimio:
         name: aphp.fhir.fr.eds
-        version: 0.1.2
-        url: classpath:/aphp.fhir.fr.eds#0.1.2.tgz
+        version: 0.1.5-chimio
+        url: classpath:/aphp.fhir.fr.eds#0.1.5-chimio.tgz
+      # fhir_aphp_eds_0_1_2:
+        # name: aphp.fhir.fr.eds
+        # version: 0.1.2
+        # url: classpath:/aphp.fhir.fr.eds#0.1.2.tgz
       # fhir_aphp_terminology:
         # name: aphp.fhir.fr.terminology
         # version: 0.1.0
@@ -161,6 +165,10 @@ hapi:
         name: aphp.fhir.fr.terminology
         version: 0.1.0
         url: classpath:/aphp.fhir.fr.terminology-ghm.tgz
+      fhir_aphp_formbuilder_1_12_0:
+        name: aphp.fhir.fr.formbuilder
+        version: 1.12.0
+        url: classpath:/aphp.fhir.fr.formbuilder#1.12.0.tgz
 
 
 
